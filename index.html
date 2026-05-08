@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/weather-app/partly-cloudy-day.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <script type="module" crossorigin src="/weather-app/assets/index-DluEZpeG.js"></script>
+    <link rel="stylesheet" crossorigin href="/weather-app/assets/index-BILVgSrX.css">
+  </head>
+  <body>
+    <main>
+      <div class="toggle-wrapper"><img src="sun.svg" alt="Sun" class="mode-toggle"></div>
+      <h1 class="app-title">Weather Forecast</h1>
+      <div class="card current-forecast">
+        <div class="top-container">
+          <div class="location-container">
+            <label for="location">Location</label>
+              <form id="location-form" class="input-row">
+                <input type="text" placeholder="Search location..." id="location" class="search" required>
+                <button type="submit" class="search-btn">Search</button>
+              </form>
+          </div>
+          <form class="degree-options">
+            <div class="degree-option">
+              <label for="fah">F°</label>
+              <input type="radio" id="fah" name="degree" value="F" checked>
+            </div>
+            <div class="degree-option">
+              <label for="cel">C°</label>
+              <input type="radio" id="cel" name="degree" value="C">
+            </div>
+          </form>
+        </div>
+        <div class="bottom-container">
+          <div class="target-location">
+            <h1 class="main-location"></h1>
+            <h3 class="sub-location"></h3>
+          </div>
+          <div class="temperatures">
+            <div class="current-temp"></div>
+            <div class="high-low">
+              <span class="high-temp"></span>
+              <span class="low-temp"></span>
+            </div>
+          </div>
+          <div class="conditions">
+            <div class="condition"></div>
+            <div class="stats-grid">
+              <div>
+                <div class="stat-label">Precip</div>
+                <div class="precip stat-value"></div>
+              </div>
+              <div>
+                <div class="stat-label">Humidity</div>
+                <div class="humidity stat-value"></div>
+              </div>
+              <div>
+                <div class="stat-label">Wind</div>
+                <div class="wind stat-value"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card five-day-forecast">
+        <div class="day">1</div>
+        <div class="day">2</div>
+        <div class="day">3</div>
+        <div class="day">4</div>
+        <div class="day">5</div>
+      </div>
+    </main>
+  </body>
+</html>
