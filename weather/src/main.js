@@ -3,6 +3,7 @@ import './style.css'
 const mode = document.querySelector(".mode-toggle");
 const body = document.querySelector("body");
 const appTitle = document.querySelector(".app-title");
+const currForecast = document.querySelector(".current-forecast");
 console.log("Hello");
 
 mode.addEventListener("click", (event) => {
@@ -14,6 +15,8 @@ mode.addEventListener("click", (event) => {
     body.classList.add("dark");
 
     appTitle.classList.add("dark");
+
+    currForecast.classList.add("dark");
   }
   else {
     mode.src = "sun.svg";
@@ -23,5 +26,7 @@ mode.addEventListener("click", (event) => {
     body.classList.remove("dark");
 
     appTitle.classList.remove("dark");
+
+    currForecast.classList.remove("dark");
   }
 });

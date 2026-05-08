@@ -9,8 +9,53 @@
   </head>
   <body>
     <main>
-      <img src="sun.svg" alt="Sun" class="mode-toggle">
+      <div class="toggle-wrapper"><img src="sun.svg" alt="Sun" class="mode-toggle"></div>
       <h1 class="app-title">Weather Forecast</h1>
+      <div class="card current-forecast">
+        <div class="top-container">
+          <div class="location-container">
+            <label for="location">Location</label>
+            <div class="input-row">
+              <input type="text" placeholder="Search location..." id="location" class="search">
+              <button class="search-btn">Search</button>
+            </div>
+          </div>
+          <form class="degree-options">
+            <div class="degree-option">
+              <label for="fah">F°</label>
+              <input type="radio" id="fah" name="degree" value="F" checked>
+            </div>
+            <div class="degree-option">
+              <label for="cel">C°</label>
+              <input type="radio" id="cel" name="degree" value="C">
+            </div>
+          </form>
+        </div>
+        <div class="bottom-container">
+          <div class="target-location">
+            <h1 class="main-location">Cincinnati,</h1>
+            <h1 class="sub-location">OH</h1>
+          </div>
+          <div class="temperatures">
+            <div class="current-temp">curr</div>
+            <div class="high-temp">High</div>
+            <div class="low-temp">Low</div>
+          </div>
+          <div class="conditions">
+            <div class="condition">Cloudy</div>
+            <div class="precip">precip</div>
+            <div class="humidity">humid</div>
+            <div class="wind">mph</div>
+          </div>
+        </div>
+      </div>
+      <div class="card five-day-forecast">
+        <div class="day">1</div>
+        <div class="day">2</div>
+        <div class="day">3</div>
+        <div class="day">4</div>
+        <div class="day">5</div>
+      </div>
     </main>
   </body>
 </html>
