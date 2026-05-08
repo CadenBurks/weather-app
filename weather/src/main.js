@@ -1,32 +1,18 @@
 import './style.css'
+import { getReport, transformData } from './api';
+import { toggleMode, renderCurrentWeather } from './ui';
 
 const mode = document.querySelector(".mode-toggle");
-const body = document.querySelector("body");
-const appTitle = document.querySelector(".app-title");
-const currForecast = document.querySelector(".current-forecast");
-console.log("Hello");
+const btn = document.querySelector(".search-btn");
+const locationForm = document.querySelector("#location-form");
 
-mode.addEventListener("click", (event) => {
-  if (mode.src.includes("sun")) {
-    mode.src = "moon.svg";
-    mode.classList.add("dark");
-    mode.alt = "Moon";
-    
-    body.classList.add("dark");
+mode.addEventListener("click", toggleMode);
 
-    appTitle.classList.add("dark");
+locationForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
 
-    currForecast.classList.add("dark");
-  }
-  else {
-    mode.src = "sun.svg";
-    mode.classList.remove("dark");
-    mode.alt = "Sun";
-    
-    body.classList.remove("dark");
-
-    appTitle.classList.remove("dark");
-
-    currForecast.classList.remove("dark");
-  }
+  const location = document.querySelector("#location").value;
+  let data = await getReport(location);
+  let transformedData = transformData(data);
+  renderCurrentWeather(transformedData);
 });

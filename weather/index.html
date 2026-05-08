@@ -15,10 +15,10 @@
         <div class="top-container">
           <div class="location-container">
             <label for="location">Location</label>
-            <div class="input-row">
-              <input type="text" placeholder="Search location..." id="location" class="search">
-              <button class="search-btn">Search</button>
-            </div>
+              <form id="location-form" class="input-row">
+                <input type="text" placeholder="Search location..." id="location" class="search" required>
+                <button type="submit" class="search-btn">Search</button>
+              </form>
           </div>
           <form class="degree-options">
             <div class="degree-option">
@@ -33,19 +33,32 @@
         </div>
         <div class="bottom-container">
           <div class="target-location">
-            <h1 class="main-location">Cincinnati,</h1>
-            <h1 class="sub-location">OH</h1>
+            <h1 class="main-location"></h1>
+            <h3 class="sub-location"></h3>
           </div>
           <div class="temperatures">
-            <div class="current-temp">curr</div>
-            <div class="high-temp">High</div>
-            <div class="low-temp">Low</div>
+            <div class="current-temp"></div>
+            <div class="high-low">
+              <span class="high-temp"></span>
+              <span class="low-temp"></span>
+            </div>
           </div>
           <div class="conditions">
-            <div class="condition">Cloudy</div>
-            <div class="precip">precip</div>
-            <div class="humidity">humid</div>
-            <div class="wind">mph</div>
+            <div class="condition"></div>
+            <div class="stats-grid">
+              <div>
+                <div class="stat-label">Precip</div>
+                <div class="precip stat-value"></div>
+              </div>
+              <div>
+                <div class="stat-label">Humidity</div>
+                <div class="humidity stat-value"></div>
+              </div>
+              <div>
+                <div class="stat-label">Wind</div>
+                <div class="wind stat-value"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
